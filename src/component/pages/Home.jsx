@@ -5,15 +5,17 @@ import heroImg2 from '../../images/hero-img02.jpg';
 import heroVedio from '../../images/hero-video.mp4';
 import worldImg from '../../images/world.png';
 import ServiceList from '../Services/ServiceList';
+import experienceImg from '../../images/experience.png';
 
 import Subtitle from '../Sheared/Subtitle/Subtitle';
 import './Home.css';
 import SearchBar from '../Sheared/SearchBar/SearchBar';
 import FeaturedTourList from '../Featured-tours/FeaturedTourList';
+import MasonryImagesGallery from '../Image-gallery/MasonryImagesGallery';
 
 const Home = () => {
     return (
-        <div>
+        <>
             {/* Hero section start */}
             <section>
                 <Container>
@@ -117,14 +119,38 @@ const Home = () => {
                                 </div>
                             </div>
                         </Col>
-                        <Col>
 
+                        <Col lg="6">
+                            <div className='experience__img'>
+                                <img src={experienceImg} alt="" />
+                            </div>
                         </Col>
                     </Row>
                 </Container>
             </section>
 
-        </div>
+{/* experience section end  */}
+
+{/* gallery section start */}
+<section>
+    <Container>
+        <Row>
+            <Col lg="12">
+            <Subtitle subtitle={"Gallery"}/>
+            <h2 className='gallery__title'>
+                Visit our customers tour gallery
+            </h2>
+            </Col>
+            <Col lg="12">
+            <MasonryImagesGallery></MasonryImagesGallery>
+            </Col>
+        </Row>
+    </Container>
+</section>
+{/* gallery section end */}
+
+
+        </>
     );
 };
 
