@@ -1,10 +1,14 @@
 import React from 'react'
+import CommonSection from '../Sheared/CommonSection/CommonSection'
 
 const Tours = () => {
   return (
-    <div>
-      <h1>Tour</h1>
-    </div>
+    
+  <>
+  <CommonSection title={"All Tours"}/>
+  </>
+
+
   )
 }
 

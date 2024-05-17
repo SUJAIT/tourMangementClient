@@ -49,7 +49,7 @@ useEffect(()=>{
 })
 
 
-    // NavBar strike End
+    // NavBar strike End and ref declear the div tag
 
     return (
         <div className="header" ref={headerRef}>
