@@ -28,6 +28,9 @@
     display: none;
 }
 
+
+/* navbar sticky  css */
+
 .sticky_header {
     width: 100%;
     height: 80px;

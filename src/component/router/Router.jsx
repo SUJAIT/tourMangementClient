@@ -30,7 +30,8 @@ const router = createBrowserRouter([
             },
             {
                 path:"/tour/search" , element:<SerchResultList></SerchResultList>
-            }
+            },
+     
         ]
     }
 ])

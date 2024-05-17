@@ -12,6 +12,10 @@ import './Home.css';
 import SearchBar from '../Sheared/SearchBar/SearchBar';
 import FeaturedTourList from '../Featured-tours/FeaturedTourList';
 import MasonryImagesGallery from '../Image-gallery/MasonryImagesGallery';
+import Testimonial from '../Testimonial/Testimonial';
+import Newsletter from '../Sheared/Newsletter/Newsletter';
+
+
 
 const Home = () => {
     return (
@@ -148,6 +152,26 @@ const Home = () => {
     </Container>
 </section>
 {/* gallery section end */}
+
+{/* testimonial section start  */}
+<section>
+    <Container>
+        <Row>
+            <Col lg="12">
+                <Subtitle subtitle={'Fans Love'} />
+                <h2 className='testimonial__title'>What our fans say about us</h2>
+            </Col>
+            <Col lg="12">
+                <Testimonial />
+            </Col>
+        </Row>
+    </Container>
+</section>
+{/* testimonial section end */}
+
+
+<Newsletter/>
+
 
 
         </>

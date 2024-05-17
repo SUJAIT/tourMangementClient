@@ -1,4 +1,4 @@
-import React from 'react';
+
 // import Button from 'react-bootstrap/Button';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
@@ -6,9 +6,10 @@ import { Link, NavLink } from 'react-router-dom';
 import { Button, Container, Row } from 'reactstrap';
 import logo from '../../images/logo.png';
 import '../Header/Header.css'
+import { useEffect, useRef } from 'react';
 
-const Header = () => {
-    const nav_links = [
+
+ const nav_links = [
         {
             path: '/',
             display: 'Home'
@@ -22,8 +23,36 @@ const Header = () => {
             display: 'Tours'
         },
     ]
+
+const Header = () => {
+
+    // NavBar strike start 
+   
+const headerRef = useRef(null)
+
+const strickyHeaderFunc = () =>{
+    window.addEventListener('scroll', ()=>{
+      if(document.body.scrollTop >80 || document.documentElement.scrollTop>80){
+        headerRef.current.classList.add('sticky_header')
+      }else{
+        headerRef.current.classList.remove('sticky_header')
+      }
+    })
+}
+
+
+
+useEffect(()=>{
+    strickyHeaderFunc()
+
+    return window.removeEventListener('scroll', strickyHeaderFunc)
+})
+
+
+    // NavBar strike End
+
     return (
-        <div className="header">
+        <div className="header" ref={headerRef}>
             <Container>
                 <Row>
                     <div className='nav-wrapper d-flex align-items-center justify-content-between'>
@@ -46,8 +75,8 @@ const Header = () => {
                         </div>
                         {/* Menu End  */}
                         {/* todo */}
-                        <div className='nav_right d-flex align-items-center gap-4'>
-                            <div className='nav_btns d-flex align-items-center gap-4'>
+                        <div className='nav_right d-flex align-items-center gap-5'>
+                            <div className='nav_btns d-flex align-items-center gap-5'>
                                 <Button className='btn secondary__btn'><Link to="/login">Login</Link></Button>
 
 
