@@ -7,6 +7,7 @@ import Login from '../pages/Login'
 import Register from '../pages/Register'
 import SerchResultList from '../pages/SerchResultList'
 import Layout from '../Layout/Layout'
+import ThankYou from '../pages/ThankYou'
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,9 @@ const router = createBrowserRouter([
             },
             {
                 path:"/tour/search" , element:<SerchResultList></SerchResultList>
+            },
+            {
+                path:"/thank-you" , element:<ThankYou></ThankYou>
             },
      
         ]

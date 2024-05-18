@@ -11,6 +11,7 @@ import { FaUserGroup } from 'react-icons/fa6'
 import { Form, ListGroup } from 'reactstrap'
 import avatar from "../../images/avatar.jpg"
 import Booking from '../Booking/Booking'
+import Newsletter from '../Sheared/Newsletter/Newsletter'
 
 const TourDetails = () => {
 
@@ -136,6 +137,7 @@ const TourDetails = () => {
           </Row>
         </Container>
       </section>
+      <Newsletter/>
     </>
 
 
